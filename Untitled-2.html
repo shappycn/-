@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<link rel="stylesheet" href="Untitled-3.css">
+	<link rel="stylesheet" href="../实验4-视频播放器/fonts/font-awesome.min.css">
+</head>
+
+<body>
+<figure>
+<figcaption>能不能给点小彩蛋</figcaption>
+	<div class="player">
+	<video  src="video/chose.mp4"></video>
+	<div class="controls">
+	<a href="#" class="switch fa fa-play"></a>
+	<div class="progress">
+	<div class="line"></div>
+	<div class="bar"></div>
+	</div>
+	<div class="timer">
+	<span class="current">00:00:00</span> / <span class="total">00:00:00</span>
+	</div>
+	<a href="#" class="expand fa fa-arrows-alt"></a>
+	</div>
+	</div>
+	</figure>
+	<div class="footer">
+			要不考虑三连一下？
+			<i class="fa fa-qq fa-1.5x"></i>
+			<i class="fa fa-weixin fa-1.5x"></i>
+			<i class="fa fa-weibo fa-1.5x"></i>
+		</div>
+	<script>
+var video = document.getElementsByTagName("video")[0];
+function formatTime(time) {
+  var h = Math.floor(time / 3600);
+  var m = Math.floor((time % 3600) / 60);
+  var s = Math.floor(time % 60);
+  return (h < 10 ? "0" + h : h) + ":" + (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+}
+video.oncanplay = function() {
+  video.style.display = "inline";
+  var totalTime = formatTime(video.duration);
+  document.querySelector(".total").innerHTML = totalTime;
+};
+document.querySelector(".switch").onclick = function() {
+  if (this.classList.contains("fa-play")) {
+    video.play();
+    this.classList.add("fa-pause");
+    this.classList.remove("fa-play");
+  } else {
+    video.pause();
+    this.classList.add("fa-play");
+    this.classList.remove("fa-pause");
+  }
+};
+function checkFull() {
+  var isFull = document.webkitIsFullScreen;
+  if (isFull === undefined) {
+    isFull = false;
+  }
+  return isFull;
+}
+
+document.querySelector(".expand").onclick = function() {
+  if (this.classList.contains("fa-arrows-alt")) {
+    video.webkitRequestFullScreen();
+    this.classList.remove("fa-arrows-alt");
+    this.classList.add("fa-compress");
+  } else {
+    document.webkitCancelFullScreen()
+    this.classList.add("fa-arrows-alt");
+    this.classList.remove("fa-compress");
+  }
+};
+var totalTime = formatTime(video.duration);
+	var total = document.getElementsByClassName("total")[0];
+	total.innerHTML = totalTime;
+	video.ontimeupdate = function(){
+		console.log(video.currentTime);
+		var currentTime = formatTime(video.currentTime);
+	var current = document.getElementsByClassName("current")[0];
+	current.innerHTML = currentTime;
+	var w = video.currentTime/video.duration*100+"%";
+	var line = document.getElementsByClassName("line")[0];
+	line.style.width = w;
+	}
+	document.querySelector(".bar").onclick = function(event) {
+  var offsetX = event.offsetX;
+  var current = offsetX / this.clientWidth * video.duration;
+  video.currentTime = current;
+};
+		video.onended = function(){
+			video.currentTime=0;
+			document.querySelector(".switch").classList.add("fa-play");
+			document.querySelector(".switch").classList.remove("fa-pause");
+			
+		}
+</script>
+</body>
+</html>

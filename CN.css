@@ -1,0 +1,733 @@
+@charset "utf-8";
+
+/* CSS Document */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*首页小视频*/
+.shell-top {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-image:url("images/star1.png");
+    z-index: 9;
+}
+
+
+.shell-top video {
+    width: 100%;
+}
+
+.shell-top .word {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 220px;
+    border: solid 10px rgba(255, 255, 255, 0.199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 0;
+}
+
+.shell-top .word h2 {
+    font: 100 60px 'font';
+    color: #fff;
+    letter-spacing: 10px;
+    z-index: 0;
+}
+
+/*第一部分主体部分和头部导航*/
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    z-index: 1;
+}
+
+.heater {
+    width: 100%;
+    padding: 33px 0;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right bottom, rgba(48, 47, 81, 0.8), rgba(60, 73, 98, 0.7), rgba(255, 255, 255, 0.6));
+    backdrop-filter: blur(10px);
+}
+
+
+nav ul li {
+    margin: 0 35px;
+    display: inline-block;
+}
+
+nav ul li a {
+    font-size: 10em;
+    font-weight: 500px;
+    color: #fff;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #8FC2CB;
+}
+
+
+nav input[type="checkbox"],
+.menu {
+    position: absolute;
+    left: 2%;
+    top: 100px;
+    display: none;
+}
+
+.logo {
+    position: absolute;
+    left: 1%;
+    top: 80%;
+
+}
+
+.logo img {
+    width: 250px;
+    height: 200px;
+}
+
+/*导航下展示*/
+.zhanshi {
+    width: 100%;
+    background: url(images/header-img.png) 200% 38%;
+    background-size: cover;
+    min-height: 600px;
+    z-index: 1;
+}
+
+
+.newsOne {
+    position: relative;
+    height: 1500px; /*原本你写了800，很明显内容溢出了，因为里面的内容总高度超过800*/
+    width: 1500px;
+    margin: 0 auto;
+    /* top: 181.5px; */ /*瞧瞧你自己写的*/
+}
+
+.newsTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+	z-index: 20;
+    /* float: left; */
+}
+
+.newsLeft{
+    width: 100%;
+    float: left;
+    z-index: 20;
+}
+
+.newsRight {
+    width: 100%;
+    float: left;
+}
+
+.leftTop {
+    height: 600px;
+	
+}
+
+.leftDown {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #0b182c, #111a2d, #171d2e, #1c1f2f, #202230);
+	z-index: 20;
+}
+
+
+
+.topImg1,
+.topImg2,
+.topImg3,
+.topImg4,
+.topImg5 {
+    float: left;
+    height: 600px;
+    width: 100%;
+    background-size: 100% 100%;
+    position: absolute;
+	
+}
+
+.rightTop h3 {
+    font-family: 'myFont';
+    font-size: 26px;
+    letter-spacing: 0.175em;
+    color: antiquewhite;
+}
+
+.rightTop {
+    height: 50px;
+    width: 100%;
+    ;
+    background-image: linear-gradient(to bottom, #0c0b11, #161625, #1d1e39, #22274f, #253066);
+    text-align: center;
+    line-height: 50px;
+}
+
+.rightDown {
+    height: 500px;
+    width: 1500px;
+    background-image: linear-gradient(to bottom, #0b182c, #0e1424, #0e101b, #0b0b13, #060607);
+}
+
+.topImg1 {
+    background-image: url(images/SAO1.png);
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+.topImg2 {
+    background-image: url(images/ALO.jpg);
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.topImg3 {
+    background-image: url(images/GGO.jpg);
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.topImg4 {
+    background-image: url(images/ALO2.jpg);
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.topImg5 {
+    background-image: url(images/UW.jpg);
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.leftDown {
+    background-color: #d6b17e;
+}
+
+.leftDown a {
+    font-size: 15px;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, #0b182c, #111a2d, #171d2e, #1c1f2f, #202230);
+    display: block;
+    float: left;
+    padding: 25px;
+    cursor: pointer;
+    padding-top: 15px;
+    margin-left: 20px;
+	z-index: 20;
+}
+
+.leftDown a:hover {
+    background-color: #fff;
+    color: #d6b17e;
+	z-index: 20px;
+
+
+}
+
+.leftDown a {
+    width: 170px;
+	z-index: 20;
+}
+
+.news .newsOne .newsRight .rightTop .title1 h3 {
+    text-align: center;
+    line-height: 50px;
+}
+
+.text1,
+.text2,
+.text3,
+.text4,
+.text5 {
+    float: left;
+    position: absolute;
+    height: 400px;
+    width: 1500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+.text1 {
+    background-image: linear-gradient(to bottom, #0b182c, #0e1424, #0e101b, #0b0b13, #060607);
+    z-index: 1;
+    text-align: center;
+}
+
+.text2,
+.text3,
+.text4,
+.text5 {
+    background-image: linear-gradient(to bottom, #0b182c, #0e1424, #0e101b, #0b0b13, #060607);
+    z-index: 0;
+    text-align: center;
+}
+
+.box2 {
+
+    height: 500px;
+    width: 1500px;
+    margin: 0px auto;
+    display: block;
+    z-index: 99;
+    position: relative; /*父容器设置为relative*/
+}
+/* 增加了这一部分 */
+.box {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: 10px solid #ddd;
+	border-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);/*设置出来变像素点了，很怪，但好像比原本的想法看着更合理*/
+    border-radius: 50%;
+    animation: round 3s infinite;
+    position: absolute; /*子容器设置为absolute*/
+    margin-top: 700px;
+    margin-left: -100px;
+}
+.box_1 {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border: 10px solid #ddd;
+	border-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);/*设置出来变像素点了，很怪，但好像比原本的想法看着更合理*/
+    border-radius: 50%;
+    animation: round 3s infinite;
+    position: absolute; /*子容器设置为absolute*/
+    margin-top: 200px;
+    margin-left: -100px;
+}
+
+@keyframes round {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.wheel {
+    position: relative;
+}
+
+/* .wheel:before {
+    position: absolute;
+    top: 190px;
+    left: 190px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: radial-gradient(circle, #6a55fb, #6269fc, #617afb, #6689f7, #7197f1, #749bf0, #78a0ee, #7da4ec, #76a1f0, #6e9df4, #679af7, #5f96fb);
+    border-radius: 50%;
+} */
+/* 增加了这一部分 */
+.about-left-box2 {
+    background: url("images/kirito.png");
+    float: left;
+    width: 500px;
+    height: 450px;
+    /* margin-top: 350px; */
+    margin-left: 50px;
+    background-position: 50% 10%;
+    z-index: 99;
+}
+
+
+.about-right-box2 {
+    margin-top: 30px;
+    float: left;
+    height: 420px;
+    width: 940px;
+    background-color: #5F5B5B;
+    margin-left: 1px;
+    box-shadow: 10px 10px 5px gray;
+    color: antiquewhite;
+    font-size: 22px;
+    line-height: 1.4;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+}
+
+.box3 {
+    height: 500px;
+    width: 1500px;
+    margin: 0px auto;
+    display: block;
+}
+
+.about-left-box3 {
+    background: url("images/Asuna1.png");
+    float: left;
+    width: 500px;
+    height: 450px;
+    /* margin-top: 100px; */
+    margin-left: 50px;
+    background-position: 60% 5%;
+
+
+}
+
+.about-right-box3 {
+    margin-top: 30px;
+    float: left;
+    height: 420px;
+    width: 940px;
+    background-color: #5F5B5B;
+    margin-left: 1px;
+    box-shadow: 10px 10px 5px gray;
+    color: antiquewhite;
+    font-size: 22px;
+    line-height: 1.4;
+    z-index: 99;
+    backdrop-filter: blur(10px);
+}
+
+.about-right-box2 span {
+    background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)no-repeat right bottom;
+    background-size: 0px 5px;
+    transition: background-size 2000ms;
+}
+
+.about-right-box2 span:hover {
+    background-position-x: left;
+    background-size: 100% 5px;
+}
+
+.about-right-box3 span {
+    background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1)no-repeat right bottom;
+    background-size: 0px 5px;
+    transition: background-size 2000ms;
+}
+
+.about-right-box3 span:hover {
+    background-position-x: left;
+    background-size: 100% 5px;
+}
+
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-image: url(images/.png);
+    float: left;
+    position: relative;
+    top: 200px;
+}
+
+.footerBox {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(#fff, rgba(225, 225, 225, 0.1));
+    float: left;
+    position: relative;
+    border: 2px solid #d6b17e;
+    border-radius: 20px;
+    color: #c18c56;
+    text-align: center;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin-left: 270px;
+    top: 50px;
+
+}
+
+.weibo {
+    width: 75px;
+    height: 75px;
+    float: left;
+    position: relative;
+    background: url(images/weibo.png) no-repeat center center;
+    background-size: 75px 75px;
+    margin: 11px;
+}
+
+.weixin {
+    width: 75px;
+    height: 75px;
+    float: left;
+    position: relative;
+    background: url(images/weixin.png) no-repeat center center;
+    background-size: 75px 75px;
+    margin: 11px;
+}
+
+.QQ {
+    width: 75px;
+    height: 75px;
+    float: left;
+    position: relative;
+    background: url(images/QQ.png) no-repeat center center;
+    background-size: 75px 75px;
+    margin: 11px;
+}
+
+.bilibili {
+    width: 75px;
+    height: 75px;
+    float: left;
+    position: relative;
+    background: url(images/bilibili.png) no-repeat center center;
+    background-size: 75px 75px;
+    margin: 11px;
+}
+
+.baidu {
+    width: 75px;
+    height: 75px;
+    float: left;
+    position: relative;
+    background: url(images/baidu.png) no-repeat center center;
+    background-size: 75px 75px;
+    margin: 11px;
+}
+
+.kefu {
+    width: 75px;
+    height: 75px;
+    float: left;
+    position: relative;
+    background: url(images/kefu.png) no-repeat center center;
+    background-size: 75px 75px;
+    margin: 11px;
+}
+
+.footerBox:hover {
+    width: 102px;
+    height: 102px;
+    box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+:root {
+    --color-font: #000000;
+    --color-bg-progress-b: #6b6b6b;
+    --color-bg-progress-l: #a0a0a0;
+    --color-bg-progress-m: #ffffff;
+}
+
+html {
+    font-size: 0.0625rem;
+    color: var(--color-font);
+}
+
+.music-box {
+    flex: none;
+    width: 400rem;
+    height: 200rem;
+    border-radius: 30rem;
+    box-sizing: border-box;
+    background-color: rgb(73, 58, 67, 0.7);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+    padding: 30rem;
+    box-shadow: inset 0px 0px 10px 2px rgb(255, 255, 255, 0.5);
+    user-select: none;
+    width: 50%;
+    z-index: 20;
+    margin-bottom: 20px;
+	
+}
+
+/* music-box 上部分 */
+.music-box>article {
+    width: 100%;
+    height: 100rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* 图片部分 */
+.m-img-box {
+    flex: none;
+    justify-content: center;
+    width: 100rem;
+    height: 100rem;
+    border-radius: 20rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.25),
+        0px 0px 8px 0px inset rgba(0, 0, 0, 0.05);
+}
+
+.m-img-content {
+    width: 100%;
+    height: 100%;
+}
+
+.m-img-content.tran {
+    transition: transform 0.4s linear 0.3s;
+}
+
+.m-img-box .chicken {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8rem;
+    transform: scale(1);
+}
+
+/* 描述部分 */
+.m-description-content {
+    position: relative;
+    margin-left: 25rem;
+    width: 0;
+    flex: 1;
+}
+
+.m-description-content>article {
+    opacity: 1;
+}
+
+.m-description-content>article.anim {
+    animation: desc-cont-anim 1s ease-in forwards;
+}
+
+@keyframes desc-cont-anim {
+    30% {
+        opacity: 0;
+        transform: var(--transform-translateY);
+    }
+
+    70% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.m-title {
+    font-size: 18rem;
+    font-weight: 500;
+    height: 30rem;
+    line-height: 30rem;
+}
+
+.m-author {
+    font-size: 15rem;
+    font-weight: 400;
+    color: #2f2f2f;
+}
+
+.m-title,
+.m-author {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.m-btn-box {
+    position: absolute;
+    bottom: 0;
+    width: 180rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.m-btn-box>button {
+    background: none;
+    border: none;
+    outline: none;
+    width: 22rem;
+    height: 22rem;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    fill: var(--color-font);
+    overflow: hidden;
+}
+
+.m-btn-box>button:active>.icon {
+    width: 20rem;
+    height: 20rem;
+}
+
+/* music-box 下部分 */
+.music-box>section {
+    width: 100%;
+    font-size: 16rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    box-sizing: border-box;
+}
+
+.m-progress-bar {
+    width: 200rem;
+    height: 6rem;
+    background-color: var(--color-bg-progress-b);
+    border-radius: 3rem;
+    overflow: hidden;
+}
+
+.m-progress-main {
+    float: left;
+    height: 100%;
+    width: 20%;
+    background-color: var(--color-bg-progress-m);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.m-progress-btn {
+    position: absolute;
+    transform: translateX(50%);
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: var(--color-bg-progress-m);
+    transition: width 0.1s linear, height 0.1s linear;
+}
+
+.m-progress-btn:active {
+    width: 14rem;
+    height: 14rem;
+}
+
+.m-progress-load {
+    height: 100%;
+    width: 50%;
+    background-color: var(--color-bg-progress-l);
+}
